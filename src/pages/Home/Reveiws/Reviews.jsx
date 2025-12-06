@@ -5,7 +5,6 @@ import ReviewCard from './ReviewCard';
 
 const Reviews = ({review}) => {
     const reviews = use(review)
-    console.log(reviews);
     
     return (
       <div className="my-24">

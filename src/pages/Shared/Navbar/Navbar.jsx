@@ -24,6 +24,12 @@ const Navbar = () => {
             <li>
               <NavLink to={"/dashboard/my-parcels"}>My Parcel</NavLink>
             </li>
+            <li>
+              <NavLink to={"/dashboard"}>Dashboard</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/my-profile"}>Profile</NavLink>
+            </li>
           </>
         )}
       </>

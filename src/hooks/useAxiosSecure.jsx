@@ -15,7 +15,7 @@ const useAxiosSecure = () => {
   useEffect(() => {
     //intercept request
     const reqInterceptor = axiosSecure.interceptors.request.use((config) => {
-      config.headers.Authorization=`Bearer ${user?.accessToken}`
+      config.headers.Authorization = `Bearer ${user?.accessToken}`
       return config
     })
 
@@ -29,9 +29,9 @@ const useAxiosSecure = () => {
       if (statusCode == 401 || statusCode == 403) {
         navigate('/401')
       }
-        
-        return Promise.reject(error);
-      
+
+      return Promise.reject(error);
+
     })
 
     return () => {
@@ -39,8 +39,8 @@ const useAxiosSecure = () => {
       axios.interceptors.response.eject(resInterceptor);
     }
 
-  },[user,navigate])
-    return axiosSecure;
+  }, [user, navigate])
+  return axiosSecure;
 };
 
 export default useAxiosSecure;

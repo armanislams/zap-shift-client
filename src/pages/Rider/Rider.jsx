@@ -37,7 +37,7 @@ const Rider = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div className="py-5">
       <h2 className="text-4xl font-bold">Be A Rider</h2>
       <form
         onSubmit={handleSubmit(handleRiderApplication)}
